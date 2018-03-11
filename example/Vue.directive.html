@@ -11,13 +11,30 @@
 <h1>Vue.directive-实例</h1>
 <hr>
 <div id="app">
-    {{message}}
+    <div v-jsmr="color">{{num}}</div>
+    <p>
+        <button @click="add">Add</button>
+    </p>
 </div>
 <script>
+    Vue.directive("jsmr",function (el,binding) {
+        console.log(el);
+        console.log(binding);
+        console.log(binding.name);
+        console.log(binding.value);
+        console.log(binding.expression);
+        el.style="color:"+binding.value;
+    });
     var app = new Vue({
         el: "#app",
         data: {
-            message: "Hello, World!"
+            num: 10,
+            color:"red"
+        },
+        methods:{
+            add:function () {
+                this.num++;
+            }
         }
     })
 </script>
