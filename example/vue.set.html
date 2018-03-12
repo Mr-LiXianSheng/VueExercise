@@ -3,22 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HelloWord</title>
+    <title>vue.set</title>
     <script type="text/javascript" src="../assets/js/vue.js"></script>
 </head>
 
 <body>
-<h1>Hello, World!-实例</h1>
+<h1>vue.set全局操作-实例</h1>
 <hr>
 <div id="app">
-    {{message}}
+    {{count}}
 </div>
 <script>
+    var outData = {
+        count:1,
+        goods:"car"
+    };
     var app = new Vue({
         el: "#app",
-        data: {
-            message: "Hello, World!"
-        }
+        data: outData
     })
 </script>
 </body>
