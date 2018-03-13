@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>computedOption</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+
+<body>
+<h1>computedOption计算选项-实例</h1>
+<hr>
+<div id="app">
+    <p>{{newPrice}}</p>
+    <ul>
+        <li v-for="item in reversNews">{{item.title}}-{{item.date}}</li>
+    </ul>
+</div>
+<script>
+    var newsList = [
+        {
+            title: "她发错一条短信 救了一个白血病男孩的命",
+            date: "2018/3/12"
+        },
+        {
+            title: "五旬老乘警坚守绿皮火车 冬冷夏热煤灰为伴",
+            date: "2018/3/13"
+        },
+        {
+            title: "苏州一学生被“世界最难考大学”录取获200万奖金",
+            date: "2018/3/11"
+        },
+        {
+            title: "女子前夫欠债300余万元 法院改判：前妻无须担责",
+            date: "2018/3/10"
+        },
+        {
+            title: "中年女子为让哥哥重新学走路，她用肩膀做拐杖！",
+            date: "2018/3/09"
+        },
+        {
+            title: "立法遏制“过劳死”，能让职场人摆脱疯狂加班吗？",
+            date: "2018/3/08"
+        }
+    ];
+    var app = new Vue({
+        el: "#app",
+        data: {
+            price: 100,
+            newsList: newsList
+        },
+        computed: {
+            newPrice: function () {
+                return this.price = "￥" + this.price + "元"
+            },
+            reversNews: function () {
+                return this.newsList.reverse()
+            }
+        }
+    })
+</script>
+</body>
+
+</html>
