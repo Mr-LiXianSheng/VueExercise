@@ -8,23 +8,23 @@
 </head>
 
 <body>
-    <h1>V-pre & V-cloak & V-once-实例</h1>
-    <hr>
-    <div id="app">
-        <div v-pre>{{message}}</div>
-        <div v-cloak>渲染完成后，才显示</div>
-        <div v-once>{{message}}</div>
-        <div><input type="text" v-model="message"></div>
-        <div>{{message}}</div>
-    </div>
-    <script>
-        var app = new Vue({
-            el: "#app",
-            data: {
-                message: "Hello, World!"
-            }
-        })
-    </script>
+<h1>V-pre & V-cloak & V-once-实例</h1>
+<hr>
+<div id="app">
+    <div v-pre>{{message}}</div>
+    <div v-cloak>渲染完成后，才显示</div>
+    <div v-once>{{message}}</div>
+    <div><input type="text" v-model="message"></div>
+    <div>{{message}}</div>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "Hello, World!"
+        }
+    })
+</script>
 </body>
 
 </html>

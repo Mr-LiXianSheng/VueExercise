@@ -27,21 +27,21 @@
     var app = new Vue({
         el: "#app",
         data: {
-            who: componentB
+            who: componentA
         },
-        components:{
-            "componentA":componentA,
-            "componentB":componentB,
-            "componentC":componentC
+        components: {
+            "componentA": componentA,
+            "componentB": componentB,
+            "componentC": componentC
         },
-        methods:{
-            changeConponent:function () {
-                if(this.who=="componentA"){
-                    this.who="componentB"
-                }else if(this.who=="componentB"){
-                    this.who="componentC"
-                }else {
-                    this.who="componentA"
+        methods: {
+            changeConponent: function () {
+                if (this.who == "componentA") {
+                    this.who = "componentB"
+                } else if (this.who == "componentB") {
+                    this.who = "componentC"
+                } else {
+                    this.who = "componentA"
                 }
             }
         }

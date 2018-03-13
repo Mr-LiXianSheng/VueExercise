@@ -8,57 +8,57 @@
 </head>
 
 <body>
-    <h1>V-bind标签属性绑定-实例</h1>
+<h1>V-bind标签属性绑定-实例</h1>
+<hr>
+<div id="app">
+    <p>
+        <img v-bind:src="imgSrc" width="350"/>
+    </p>
+    <p>
+        <a :href="webUrl" target="_blank">技术胖</a>
+    </p>
     <hr>
-    <div id="app">
-        <p>
-            <img v-bind:src="imgSrc" width="350" />
-        </p>
-        <p>
-            <a :href="webUrl" target="_blank">技术胖</a>
-        </p>
-        <hr>
-        <div :class="className">1、绑定Class</div>
-        <div :class="{classA:isok}">2、绑定Class中的判断</div>
-        <div :class="{classA,classB}">3、绑定Class中的数组</div>
-        <div :class="isok?classA:classB">4、绑定Class中的三元运算符</div>
-        <hr>
-        <div>
-            <input type="checkbox" id="isok" v-model="isok"/>
-            <label for="isok">isok：{{isok}}</label>
-        </div>
-        <hr>
-        <div :style="{color:red,fontSize:font}">5、绑定style</div>
-        <div :style="styleObject">6、对象绑定style</div>
+    <div :class="className">1、绑定Class</div>
+    <div :class="{classA:isok}">2、绑定Class中的判断</div>
+    <div :class="{classA,classB}">3、绑定Class中的数组</div>
+    <div :class="isok?classA:classB">4、绑定Class中的三元运算符</div>
+    <hr>
+    <div>
+        <input type="checkbox" id="isok" v-model="isok"/>
+        <label for="isok">isok：{{isok}}</label>
     </div>
-    <style>
-        .classA {
-            color: red;
-        }
+    <hr>
+    <div :style="{color:red,fontSize:font}">5、绑定style</div>
+    <div :style="styleObject">6、对象绑定style</div>
+</div>
+<style>
+    .classA {
+        color: red;
+    }
 
-        .classB {
-            font-size: 150%;
-        }
-    </style>
-    <script>
-        var app = new Vue({
-            el: "#app",
-            data: {
-                imgSrc: "https://www.baidu.com/img/bd_logo1.png",
-                webUrl: "http://www.lxsweb.top/",
-                className:"classA",
-                isok:false,
-                classA:"classA",
-                classB:"classB",
-                red:"red",
-                font:"20px",
-                styleObject:{
-                    color:"green",
-                    fontSize:"24px"
-                }
+    .classB {
+        font-size: 150%;
+    }
+</style>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            imgSrc: "https://www.baidu.com/img/bd_logo1.png",
+            webUrl: "http://www.lxsweb.top/",
+            className: "classA",
+            isok: false,
+            classA: "classA",
+            classB: "classB",
+            red: "red",
+            font: "20px",
+            styleObject: {
+                color: "green",
+                fontSize: "24px"
             }
-        })
-    </script>
+        }
+    })
+</script>
 </body>
 
 </html>

@@ -8,22 +8,22 @@
 </head>
 
 <body>
-    <h1>V-text&V-html-实例</h1>
-    <hr>
-    <div id="app">
-        <span>{{message}}</span> = <span v-text="message"></span>
-        <br />
-        <span>{{dodo}}</span> = <span v-html="dodo"></span>
-    </div>
-    <script>
-        var app = new Vue({
-            el:"#app",
-            data:{
-                message:"Hello World!",
-                dodo:"<span>Hello World!</span>"
-            }
-        })
-    </script>
+<h1>V-text&V-html-实例</h1>
+<hr>
+<div id="app">
+    <span>{{message}}</span> = <span v-text="message"></span>
+    <br/>
+    <span>{{dodo}}</span> = <span v-html="dodo"></span>
+</div>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "Hello World!",
+            dodo: "<span>Hello World!</span>"
+        }
+    })
+</script>
 </body>
 
 </html>
