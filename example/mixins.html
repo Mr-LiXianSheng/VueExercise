@@ -20,6 +20,13 @@
             console.log("数据发生变化，变成成了"+this.num)
         }
     };
+
+    Vue.mixin({
+        updated:function () {
+            console.log("我是全局的混入")
+        }
+    });
+
     var app = new Vue({
         el: "#app",
         data: {
@@ -29,7 +36,11 @@
             add:function () {
                 this.num++;
             }
-        }
+        },
+        updated:function () {
+          console.log("我是原生的updated")
+        },
+        mixins:[addConsole]
     })
 </script>
 </body>
